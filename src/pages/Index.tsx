@@ -1,10 +1,11 @@
-import { Phone, PhoneCall, Shield, Wifi, Tv, HelpCircle, CheckCircle, XCircle, ArrowRight, Users, Clock, Headphones, ChevronLeft, ChevronRight, Star, Quote, Lock, Eye, MessageCircle } from "lucide-react";
+import { Phone, PhoneCall, Shield, Wifi, Tv, HelpCircle, CheckCircle, XCircle, ArrowRight, Users, Clock, Headphones, ChevronLeft, ChevronRight, Star, Quote, Lock, Eye, MessageCircle, ChevronUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import PageWrapper from "@/components/PageWrapper";
 import DisclosureBanner from "@/components/DisclosureBanner";
 import { useState, useEffect, useRef } from "react";
 
 import heroOffice from "@/assets/hero-office.jpg";
+import heroSupport from "@/assets/hero-support.jpg";
 import bentoWifi from "@/assets/bento-wifi.jpg";
 import bentoCable from "@/assets/bento-cable.jpg";
 import bentoBroadband from "@/assets/bento-broadband.jpg";
@@ -92,9 +93,31 @@ const testimonials = [
   },
 ];
 
+const ScrollToTop = () => {
+  const [visible, setVisible] = useState(false);
+  useEffect(() => {
+    const onScroll = () => setVisible(window.scrollY > 400);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+  if (!visible) return null;
+  return (
+    <button
+      onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      className="fixed bottom-6 right-6 z-50 h-12 w-12 rounded-full hero-gradient text-primary-foreground shadow-xl flex items-center justify-center hover:opacity-90 transition-opacity animate-fade-in"
+      aria-label="Scroll to top"
+    >
+      <ChevronUp className="h-5 w-5" />
+    </button>
+  );
+};
+
+const heroImages = [heroOffice, heroSupport];
+
 const Index = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  const [heroIdx, setHeroIdx] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => setCurrentSlide((p) => (p + 1) % carouselSlides.length), 5000);
@@ -106,63 +129,91 @@ const Index = () => {
     return () => clearInterval(timer);
   }, []);
 
+  useEffect(() => {
+    const timer = setInterval(() => setHeroIdx((p) => (p + 1) % heroImages.length), 4000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <PageWrapper>
-      {/* Hero - Split asymmetric layout */}
-      <section className="relative overflow-hidden bg-background">
-        <div className="container py-16 md:py-24 lg:py-28">
-          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-            <div className="order-2 lg:order-1">
-              <div className="trust-badge inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-xs font-semibold mb-6 animate-fade-in">
-                <Shield className="h-3.5 w-3.5" /> Independent Third-Party · Est. 2026
-              </div>
-              <h1 className="font-display text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold tracking-tight text-foreground leading-[1.08] mb-5 animate-fade-in" style={{ animationDelay: "0.1s" }}>
-                Independent Internet & Cable{" "}
-                <span className="gradient-text">Service Assistance</span>
-              </h1>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-8 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-                Get general guidance and informational support related to internet, broadband, Wi-Fi, and cable TV services from an independent third-party assistance provider.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-3 mb-5 animate-fade-in" style={{ animationDelay: "0.3s" }}>
-                <a href="tel:+18886412045">
-                  <Button size="lg" variant="hero" className="gap-2 text-base px-7 h-13 rounded-xl">
-                    <PhoneCall className="h-4 w-4" /> Talk to a Third-Party Advisor
-                  </Button>
-                </a>
-                <a href="tel:+18886412045">
-                  <Button size="lg" variant="hero-outline" className="gap-2 text-base px-7 h-13 rounded-xl">
-                    <Phone className="h-4 w-4" /> Call for Independent Guidance
-                  </Button>
-                </a>
-              </div>
-              <p className="text-xs text-muted-foreground animate-fade-in" style={{ animationDelay: "0.4s" }}>Not an ISP. No brand affiliation.</p>
+      <ScrollToTop />
+
+      {/* Hero - Full-width cinematic with crossfade */}
+      <section className="relative min-h-[85vh] flex items-center overflow-hidden">
+        {/* Background images with crossfade */}
+        {heroImages.map((img, i) => (
+          <div
+            key={i}
+            className="absolute inset-0 transition-opacity duration-1000"
+            style={{ opacity: i === heroIdx ? 1 : 0 }}
+          >
+            <img src={img} alt="" className="w-full h-full object-cover scale-105" />
+          </div>
+        ))}
+        <div className="absolute inset-0 bg-gradient-to-r from-foreground/85 via-foreground/60 to-transparent" />
+
+        <div className="container relative z-10 py-20">
+          <div className="max-w-2xl">
+            <div className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/20 bg-primary-foreground/10 backdrop-blur-md px-4 py-2 text-xs font-semibold text-primary-foreground mb-8 animate-fade-in">
+              <Shield className="h-3.5 w-3.5" />
+              Independent Third-Party · Est. 2026 · Canada
             </div>
-            <div className="order-1 lg:order-2 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-              <div className="relative">
-                <div className="rounded-3xl overflow-hidden shadow-2xl">
-                  <img src={heroOffice} alt="NorthBridge Service Assist team providing independent guidance" className="w-full aspect-[4/3] object-cover" />
+
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-primary-foreground leading-[1.08] mb-6 animate-fade-in" style={{ animationDelay: "0.15s" }}>
+              Independent Internet & Cable{" "}
+              <span className="text-accent">Service Assistance</span>
+            </h1>
+
+            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-10 max-w-xl animate-fade-in" style={{ animationDelay: "0.25s" }}>
+              Get general guidance and informational support related to internet, broadband, Wi-Fi, and cable TV services from an independent third-party assistance provider.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-3 mb-6 animate-fade-in" style={{ animationDelay: "0.35s" }}>
+              <a href="tel:+18886412045">
+                <Button size="lg" variant="hero" className="gap-2 text-base px-8 h-14 rounded-xl shadow-2xl">
+                  <PhoneCall className="h-4.5 w-4.5" /> Talk to a Third-Party Advisor
+                </Button>
+              </a>
+              <a href="tel:+18886412045">
+                <Button size="lg" className="gap-2 text-base px-8 h-14 rounded-xl border-2 border-primary-foreground/30 bg-primary-foreground/10 text-primary-foreground hover:bg-primary-foreground/20 font-semibold backdrop-blur-sm">
+                  <Phone className="h-4 w-4" /> Call for Independent Guidance
+                </Button>
+              </a>
+            </div>
+
+            <p className="text-xs text-primary-foreground/50 animate-fade-in" style={{ animationDelay: "0.45s" }}>
+              Not an ISP. No brand affiliation. Service assistance fees apply separately.
+            </p>
+          </div>
+
+          {/* Floating cards on the right for larger screens */}
+          <div className="hidden lg:block absolute right-16 top-1/2 -translate-y-1/2 space-y-4">
+            <div className="bg-card/90 backdrop-blur-lg rounded-2xl border p-5 shadow-2xl animate-float max-w-[220px]">
+              <div className="flex items-center gap-3 mb-2">
+                <div className="h-10 w-10 rounded-xl hero-gradient flex items-center justify-center">
+                  <Headphones className="h-5 w-5 text-primary-foreground" />
                 </div>
-                {/* Floating badge */}
-                <div className="absolute -bottom-4 -left-4 md:-left-6 bg-card rounded-2xl border p-4 shadow-xl animate-float">
-                  <div className="flex items-center gap-3">
-                    <div className="h-10 w-10 rounded-xl hero-gradient flex items-center justify-center">
-                      <Headphones className="h-5 w-5 text-primary-foreground" />
-                    </div>
-                    <div>
-                      <p className="font-display text-sm font-bold text-foreground">24/7 Available</p>
-                      <p className="text-xs text-muted-foreground">Independent Support</p>
-                    </div>
-                  </div>
+                <div>
+                  <p className="font-display text-sm font-bold text-foreground">24/7 Available</p>
+                  <p className="text-xs text-muted-foreground">Independent Support</p>
                 </div>
-                {/* Floating stats */}
-                <div className="absolute -top-3 -right-3 md:-right-5 bg-card rounded-2xl border p-4 shadow-xl animate-float" style={{ animationDelay: "1s" }}>
-                  <div className="flex items-center gap-2">
-                    <Users className="h-5 w-5 text-primary" />
-                    <div>
-                      <p className="font-display text-lg font-extrabold text-foreground">10K+</p>
-                      <p className="text-xs text-muted-foreground">Canadians Assisted</p>
-                    </div>
-                  </div>
+              </div>
+            </div>
+            <div className="bg-card/90 backdrop-blur-lg rounded-2xl border p-5 shadow-2xl animate-float max-w-[220px]" style={{ animationDelay: "1.5s" }}>
+              <div className="flex items-center gap-3">
+                <Users className="h-5 w-5 text-primary" />
+                <div>
+                  <p className="font-display text-lg font-extrabold text-foreground">10K+</p>
+                  <p className="text-xs text-muted-foreground">Canadians Assisted</p>
+                </div>
+              </div>
+            </div>
+            <div className="bg-card/90 backdrop-blur-lg rounded-2xl border p-5 shadow-2xl animate-float max-w-[220px]" style={{ animationDelay: "3s" }}>
+              <div className="flex items-center gap-3">
+                <CheckCircle className="h-5 w-5 text-primary" />
+                <div>
+                  <p className="font-display text-sm font-bold text-foreground">100% Independent</p>
+                  <p className="text-xs text-muted-foreground">No provider ties</p>
                 </div>
               </div>
             </div>
@@ -171,7 +222,7 @@ const Index = () => {
       </section>
 
       {/* Disclosure below hero */}
-      <div className="container pb-6">
+      <div className="container py-6">
         <DisclosureBanner />
       </div>
 
