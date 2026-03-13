@@ -2,10 +2,10 @@ import PageWrapper from "@/components/PageWrapper";
 import { AlertTriangle } from "lucide-react";
 
 const items = [
-  "NorthBridge Service Assist is an independent third-party service assistance provider. We are not affiliated with, authorized by, or endorsed by any internet, broadband, or cable TV service provider.",
+  "Go Canada Wifi is an independent third-party service assistance provider. We are not affiliated with, authorized by, or endorsed by any internet, broadband, or cable TV service provider.",
   "Brand names mentioned on this website are used strictly for informational purposes. All trademarks belong to their respective owners.",
-  "The information provided by NorthBridge Service Assist is for general informational guidance only. We do not guarantee the accuracy, completeness, or usefulness of any information provided.",
-  "Users are encouraged to verify all information directly with their respective service providers. NorthBridge Service Assist is not responsible for any actions taken based on the information provided through our platform.",
+  "The information provided by Go Canada Wifi is for general informational guidance only. We do not guarantee the accuracy, completeness, or usefulness of any information provided.",
+  "Users are encouraged to verify all information directly with their respective service providers. Go Canada Wifi is not responsible for any actions taken based on the information provided through our platform.",
   "Our service assistance fees are separate from any charges billed by telecom or cable service providers.",
 ];
 

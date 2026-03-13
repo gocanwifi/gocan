@@ -86,13 +86,13 @@ const Contact = () => {
                 </div>
               </a>
 
-              <a href="mailto:support@northbridgeserviceassist.com" className="rounded-2xl border bg-card p-6 flex gap-4 items-center hover:shadow-lg transition-shadow block">
+              <a href="mailto:support@gocanadawifi.com" className="rounded-2xl border bg-card p-6 flex gap-4 items-center hover:shadow-lg transition-shadow block">
                 <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
                   <Mail className="h-5 w-5 text-primary" />
                 </div>
                 <div>
                   <h3 className="font-display font-bold text-foreground text-sm">Email</h3>
-                  <p className="text-muted-foreground text-sm break-all">support@northbridgeserviceassist.com</p>
+                  <p className="text-muted-foreground text-sm break-all">support@gocanadawifi.com</p>
                 </div>
               </a>
 
@@ -109,7 +109,7 @@ const Contact = () => {
               <div className="rounded-2xl border bg-card p-6">
                 <h3 className="font-display text-sm font-bold text-foreground mb-2">Call Greeting</h3>
                 <p className="text-muted-foreground text-xs leading-relaxed italic">
-                  "Thank you for calling NorthBridge Service Assist, an independent service assistance platform. We provide general guidance related to internet and cable services."
+                  "Thank you for calling Go Canada Wifi, an independent service assistance platform. We provide general guidance related to internet and cable services."
                 </p>
               </div>
 
@@ -163,7 +163,7 @@ const Contact = () => {
                   </Button>
 
                   <p className="text-xs text-muted-foreground text-center">
-                    By submitting, you acknowledge that NorthBridge Service Assist is an independent third-party provider.
+                    By submitting, you acknowledge that Go Canada Wifi is an independent third-party provider.
                   </p>
                 </form>
               </div>
