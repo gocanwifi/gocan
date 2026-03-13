@@ -166,9 +166,9 @@ const About = () => (
         <AnimatedSection>
           <h2 className="font-display text-3xl md:text-4xl font-extrabold text-primary-foreground mb-4">Ready for Independent Guidance?</h2>
           <p className="text-primary-foreground/75 mb-6 text-lg">Our team is here to assist you with any internet or cable TV-related questions.</p>
-          <a href="tel:+18886412045">
+          <a href="tel:+18886517421">
             <button className="hero-gradient text-primary-foreground font-semibold px-8 py-3 rounded-xl text-base hover:opacity-90 transition-opacity">
-              Speak With Support
+              Call Now (888) 651-7421
             </button>
           </a>
         </AnimatedSection>

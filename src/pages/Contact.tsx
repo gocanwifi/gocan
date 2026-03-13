@@ -76,13 +76,13 @@ const Contact = () => {
           <div className="grid lg:grid-cols-5 gap-10">
             {/* Left: info cards */}
             <div className="lg:col-span-2 space-y-5">
-              <a href="tel:+18886412045" className="rounded-2xl border bg-card p-6 flex gap-4 items-center hover:shadow-lg transition-shadow block">
+              <a href="tel:+18886517421" className="rounded-2xl border bg-card p-6 flex gap-4 items-center hover:shadow-lg transition-shadow block">
                 <div className="h-12 w-12 rounded-xl hero-gradient flex items-center justify-center flex-shrink-0">
                   <Phone className="h-5 w-5 text-primary-foreground" />
                 </div>
                 <div>
                   <h3 className="font-display font-bold text-foreground text-sm">Phone</h3>
-                  <p className="text-muted-foreground text-sm">+1 (888) 641-2045</p>
+                  <p className="text-muted-foreground text-sm">(888) 651-7421</p>
                 </div>
               </a>
 

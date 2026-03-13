@@ -5,7 +5,7 @@ import { Clock, CheckCircle, Mail, Settings, AlertTriangle } from "lucide-react"
 const sections = [
   { icon: Clock, title: "Refund Window", text: 'Refund requests can be submitted within 7 to 15 days of the service purchase date depending on the nature of the assistance provided.' },
   { icon: CheckCircle, title: "Eligibility", text: "Eligibility may vary based on whether assistance services have already been delivered. Please review the conditions below before submitting a refund request." },
-  { icon: Mail, title: "How to Request a Refund", text: "To submit a refund request, please contact us at support@gocanadawifi.com or call +1 (888) 641-2045.", hasLinks: true },
+  { icon: Mail, title: "How to Request a Refund", text: "To submit a refund request, please contact us at support@gocanadawifi.com or call (888) 651-7421.", hasLinks: true },
   { icon: Settings, title: "Processing", text: "Refunds are processed after internal review. Processing times may vary depending on the payment method used and the nature of the assistance provided." },
   { icon: AlertTriangle, title: "Important Note", text: "Go Canada Wifi service fees are separate from any charges billed by your internet, broadband, or cable TV service provider. Refunds apply to Go Canada Wifi fees only." },
 ];
@@ -43,7 +43,7 @@ const Refund = () => (
                       <>
                         To submit a refund request, please contact us at{" "}
                         <a href="mailto:support@gocanadawifi.com" className="text-primary hover:underline">support@gocanadawifi.com</a>{" "}
-                        or call <a href="tel:+18886412045" className="text-primary hover:underline">+1 (888) 641-2045</a>.
+                        or call <a href="tel:+18886517421" className="text-primary hover:underline">(888) 651-7421</a>.
                       </>
                     ) : s.text}
                   </p>

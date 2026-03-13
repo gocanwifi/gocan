@@ -8,9 +8,8 @@ const SiteFooter = () => (
       <div className="grid gap-8 md:grid-cols-3">
         {/* Brand */}
         <div>
-          <div className="flex items-center gap-2 font-display text-lg font-bold text-foreground mb-3">
-            <img src={logo} alt="Go Canada Wifi" className="h-8 w-8 object-contain" />
-            Go Canada Wifi
+          <div className="flex items-center mb-3">
+            <img src={logo} alt="Go Canada Wifi" className="h-32 w-32 object-contain" />
           </div>
           <p className="text-sm text-muted-foreground leading-relaxed">
             Independent third-party service assistance startup launched in 2026. Providing general guidance related to internet, broadband, Wi-Fi, and cable TV services.
@@ -38,8 +37,8 @@ const SiteFooter = () => (
         <div>
           <span className="font-display font-semibold text-foreground mb-3 block">Contact</span>
           <div className="flex flex-col gap-2 text-sm text-muted-foreground">
-            <a href="tel:+18886412045" className="flex items-center gap-2 hover:text-foreground transition-colors">
-              <Phone className="h-4 w-4" /> +1 (888) 641-2045
+            <a href="tel:+18886517421" className="flex items-center gap-2 hover:text-foreground transition-colors">
+              <Phone className="h-4 w-4" /> (888) 651-7421
             </a>
             <a href="mailto:support@gocanadawifi.com" className="flex items-center gap-2 hover:text-foreground transition-colors">
               <Mail className="h-4 w-4" /> support@gocanadawifi.com
