@@ -1,10 +1,10 @@
-import { Phone, PhoneCall, Shield, Wifi, Tv, HelpCircle, CheckCircle, XCircle, ArrowRight, Users, Clock, Headphones, ChevronLeft, ChevronRight } from "lucide-react";
+import { Phone, PhoneCall, Shield, Wifi, Tv, HelpCircle, CheckCircle, XCircle, ArrowRight, Users, Clock, Headphones, ChevronLeft, ChevronRight, Star, Quote, Lock, Eye, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import PageWrapper from "@/components/PageWrapper";
 import DisclosureBanner from "@/components/DisclosureBanner";
 import { useState, useEffect, useRef } from "react";
 
-import heroImg from "@/assets/hero-support.jpg";
+import heroOffice from "@/assets/hero-office.jpg";
 import bentoWifi from "@/assets/bento-wifi.jpg";
 import bentoCable from "@/assets/bento-cable.jpg";
 import bentoBroadband from "@/assets/bento-broadband.jpg";
@@ -12,8 +12,12 @@ import bentoGuide from "@/assets/bento-guide.jpg";
 import carouselSupport from "@/assets/carousel-support.jpg";
 import carouselNetwork from "@/assets/carousel-network.jpg";
 import carouselFamily from "@/assets/carousel-family.jpg";
+import testimonial1 from "@/assets/testimonial-1.jpg";
+import testimonial2 from "@/assets/testimonial-2.jpg";
+import testimonial3 from "@/assets/testimonial-3.jpg";
+import ctaGradient from "@/assets/cta-gradient.jpg";
+import whyTrust from "@/assets/why-trust.jpg";
 
-// Intersection Observer hook
 const useInView = (threshold = 0.15) => {
   const ref = useRef<HTMLDivElement>(null);
   const [inView, setInView] = useState(false);
@@ -64,68 +68,125 @@ const carouselSlides = [
   { img: carouselFamily, title: "Supporting Canadian Families", text: "From Wi-Fi setup guidance to cable TV questions, we assist families across Canada with independent support." },
 ];
 
+const testimonials = [
+  {
+    name: "Sarah M.",
+    location: "Toronto, ON",
+    stars: 5,
+    quote: "NorthBridge helped me understand my broadband options clearly. Their independent guidance made the whole process so much easier to navigate.",
+    img: testimonial1,
+  },
+  {
+    name: "David R.",
+    location: "Vancouver, BC",
+    stars: 5,
+    quote: "I appreciated how transparent they were about being independent. The guidance I received about Wi-Fi connectivity was exactly what I needed.",
+    img: testimonial2,
+  },
+  {
+    name: "Priya & James K.",
+    location: "Calgary, AB",
+    stars: 4,
+    quote: "As newcomers to Canada, we needed help understanding internet and cable services. NorthBridge guided us with patience and clarity.",
+    img: testimonial3,
+  },
+];
+
 const Index = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => setCurrentSlide((p) => (p + 1) % carouselSlides.length), 5000);
     return () => clearInterval(timer);
   }, []);
 
+  useEffect(() => {
+    const timer = setInterval(() => setCurrentTestimonial((p) => (p + 1) % testimonials.length), 6000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <PageWrapper>
-      {/* Hero */}
-      <section className="relative overflow-hidden min-h-[90vh] flex items-center">
-        <div className="absolute inset-0">
-          <img src={heroImg} alt="NorthBridge Service Assist team providing independent guidance" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-r from-foreground/90 via-foreground/70 to-foreground/40" />
-        </div>
-        <div className="container relative z-10 py-20">
-          <div className="max-w-2xl">
-            <div className="trust-badge inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-xs font-semibold mb-6 animate-fade-in">
-              <Shield className="h-3.5 w-3.5" /> Independent Third-Party Assistance · Est. 2026
+      {/* Hero - Split asymmetric layout */}
+      <section className="relative overflow-hidden bg-background">
+        <div className="container py-16 md:py-24 lg:py-28">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            <div className="order-2 lg:order-1">
+              <div className="trust-badge inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-xs font-semibold mb-6 animate-fade-in">
+                <Shield className="h-3.5 w-3.5" /> Independent Third-Party · Est. 2026
+              </div>
+              <h1 className="font-display text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold tracking-tight text-foreground leading-[1.08] mb-5 animate-fade-in" style={{ animationDelay: "0.1s" }}>
+                Independent Internet & Cable{" "}
+                <span className="gradient-text">Service Assistance</span>
+              </h1>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-8 animate-fade-in" style={{ animationDelay: "0.2s" }}>
+                Get general guidance and informational support related to internet, broadband, Wi-Fi, and cable TV services from an independent third-party assistance provider.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 mb-5 animate-fade-in" style={{ animationDelay: "0.3s" }}>
+                <a href="tel:+18886412045">
+                  <Button size="lg" variant="hero" className="gap-2 text-base px-7 h-13 rounded-xl">
+                    <PhoneCall className="h-4 w-4" /> Talk to a Third-Party Advisor
+                  </Button>
+                </a>
+                <a href="tel:+18886412045">
+                  <Button size="lg" variant="hero-outline" className="gap-2 text-base px-7 h-13 rounded-xl">
+                    <Phone className="h-4 w-4" /> Call for Independent Guidance
+                  </Button>
+                </a>
+              </div>
+              <p className="text-xs text-muted-foreground animate-fade-in" style={{ animationDelay: "0.4s" }}>Not an ISP. No brand affiliation.</p>
             </div>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-primary-foreground leading-[1.08] mb-5 animate-fade-in" style={{ animationDelay: "0.1s" }}>
-              Independent Internet & Cable{" "}
-              <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">Service Assistance</span>
-            </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-8 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-              Get general guidance and informational support related to internet, broadband, Wi-Fi, and cable TV services from an independent third-party assistance provider.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 mb-5 animate-fade-in" style={{ animationDelay: "0.3s" }}>
-              <a href="tel:+18886412045">
-                <Button size="lg" variant="hero" className="gap-2 text-base px-7 h-13 rounded-xl">
-                  <PhoneCall className="h-4 w-4" /> Talk to a Third-Party Advisor
-                </Button>
-              </a>
-              <a href="tel:+18886412045">
-                <Button size="lg" className="gap-2 text-base px-7 h-13 rounded-xl border-2 border-primary-foreground/30 bg-primary-foreground/10 text-primary-foreground hover:bg-primary-foreground/20 font-semibold backdrop-blur-sm">
-                  <Phone className="h-4 w-4" /> Call for Independent Guidance
-                </Button>
-              </a>
+            <div className="order-1 lg:order-2 animate-fade-in" style={{ animationDelay: "0.2s" }}>
+              <div className="relative">
+                <div className="rounded-3xl overflow-hidden shadow-2xl">
+                  <img src={heroOffice} alt="NorthBridge Service Assist team providing independent guidance" className="w-full aspect-[4/3] object-cover" />
+                </div>
+                {/* Floating badge */}
+                <div className="absolute -bottom-4 -left-4 md:-left-6 bg-card rounded-2xl border p-4 shadow-xl animate-float">
+                  <div className="flex items-center gap-3">
+                    <div className="h-10 w-10 rounded-xl hero-gradient flex items-center justify-center">
+                      <Headphones className="h-5 w-5 text-primary-foreground" />
+                    </div>
+                    <div>
+                      <p className="font-display text-sm font-bold text-foreground">24/7 Available</p>
+                      <p className="text-xs text-muted-foreground">Independent Support</p>
+                    </div>
+                  </div>
+                </div>
+                {/* Floating stats */}
+                <div className="absolute -top-3 -right-3 md:-right-5 bg-card rounded-2xl border p-4 shadow-xl animate-float" style={{ animationDelay: "1s" }}>
+                  <div className="flex items-center gap-2">
+                    <Users className="h-5 w-5 text-primary" />
+                    <div>
+                      <p className="font-display text-lg font-extrabold text-foreground">10K+</p>
+                      <p className="text-xs text-muted-foreground">Canadians Assisted</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <p className="text-xs text-primary-foreground/60 animate-fade-in" style={{ animationDelay: "0.4s" }}>Not an ISP. No brand affiliation.</p>
           </div>
         </div>
       </section>
 
       {/* Disclosure below hero */}
-      <div className="container py-6">
+      <div className="container pb-6">
         <DisclosureBanner />
       </div>
 
-      {/* Stats */}
-      <section className="py-12 border-b">
+      {/* Stats ribbon */}
+      <section className="py-12 border-y hero-gradient">
         <div className="container">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {stats.map((s, i) => (
               <AnimatedSection key={s.label} delay={`[animation-delay:${i * 100}ms]`}>
                 <div className="text-center">
-                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 mb-3">
-                    <s.icon className="h-5 w-5 text-primary" />
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary-foreground/20 mb-3">
+                    <s.icon className="h-5 w-5 text-primary-foreground" />
                   </div>
-                  <div className="font-display text-3xl font-extrabold text-foreground">{s.value}</div>
-                  <div className="text-sm text-muted-foreground mt-1">{s.label}</div>
+                  <div className="font-display text-3xl font-extrabold text-primary-foreground">{s.value}</div>
+                  <div className="text-sm text-primary-foreground/75 mt-1">{s.label}</div>
                 </div>
               </AnimatedSection>
             ))}
@@ -144,9 +205,7 @@ const Index = () => {
             </p>
           </AnimatedSection>
 
-          {/* Bento Grid */}
           <div className="grid md:grid-cols-3 gap-4 max-w-5xl mx-auto">
-            {/* Large card */}
             <AnimatedSection className="md:col-span-2 md:row-span-2">
               <div className="relative rounded-2xl overflow-hidden h-full min-h-[320px] group">
                 <img src={weDoItems[0].img} alt={weDoItems[0].title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
@@ -161,7 +220,6 @@ const Index = () => {
               </div>
             </AnimatedSection>
 
-            {/* Small cards */}
             {weDoItems.slice(1).map((item, i) => (
               <AnimatedSection key={item.title} delay={`[animation-delay:${(i + 1) * 150}ms]`}>
                 <div className="relative rounded-2xl overflow-hidden h-48 group">
@@ -185,8 +243,45 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Why Trust Us */}
+      <section className="section-alt py-20 md:py-28">
+        <div className="container">
+          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
+            <AnimatedSection>
+              <div className="rounded-3xl overflow-hidden shadow-xl">
+                <img src={whyTrust} alt="Smart home connectivity setup" className="w-full aspect-[4/3] object-cover" />
+              </div>
+            </AnimatedSection>
+            <AnimatedSection delay="[animation-delay:200ms]">
+              <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-2">Why Choose Us</p>
+              <h2 className="font-display text-3xl md:text-4xl font-extrabold text-foreground mb-6">
+                Transparent, Independent & Focused on You
+              </h2>
+              <div className="space-y-4">
+                {[
+                  { icon: Shield, title: "Fully Independent", desc: "No affiliation with any telecom or internet provider. Our guidance is unbiased." },
+                  { icon: Eye, title: "Complete Transparency", desc: "We clearly disclose our role and fees. No hidden charges or surprises." },
+                  { icon: Lock, title: "Privacy First", desc: "We never request provider passwords or sensitive login credentials." },
+                  { icon: MessageCircle, title: "Helpful Guidance", desc: "Our team provides clear, understandable information about connectivity services." },
+                ].map((item) => (
+                  <div key={item.title} className="flex gap-4 items-start">
+                    <div className="h-10 w-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <item.icon className="h-5 w-5 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-display text-sm font-bold text-foreground mb-1">{item.title}</h3>
+                      <p className="text-sm text-muted-foreground">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
       {/* Carousel Section */}
-      <section className="section-alt py-20 md:py-28 overflow-hidden">
+      <section className="py-20 md:py-28 overflow-hidden">
         <div className="container">
           <AnimatedSection className="text-center mb-12">
             <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-2">What We Offer</p>
@@ -202,7 +297,7 @@ const Index = () => {
                       <div className="aspect-[4/3] md:aspect-auto">
                         <img src={slide.img} alt={slide.title} className="w-full h-full object-cover" />
                       </div>
-                      <div className="bg-card p-8 md:p-12 flex flex-col justify-center">
+                      <div className="bg-card p-8 md:p-12 flex flex-col justify-center border border-l-0">
                         <h3 className="font-display text-2xl font-bold text-foreground mb-3">{slide.title}</h3>
                         <p className="text-muted-foreground leading-relaxed mb-6">{slide.text}</p>
                         <a href="tel:+18886412045">
@@ -217,7 +312,6 @@ const Index = () => {
               </div>
             </div>
 
-            {/* Controls */}
             <div className="flex items-center justify-center gap-4 mt-6">
               <button onClick={() => setCurrentSlide((p) => (p - 1 + carouselSlides.length) % carouselSlides.length)} className="h-10 w-10 rounded-full border bg-card flex items-center justify-center hover:bg-secondary transition-colors">
                 <ChevronLeft className="h-4 w-4" />
@@ -235,7 +329,75 @@ const Index = () => {
         </div>
       </section>
 
-      {/* What We Do NOT Do - Split layout */}
+      {/* Testimonials */}
+      <section className="section-alt py-20 md:py-28">
+        <div className="container">
+          <AnimatedSection className="text-center mb-14">
+            <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-2">Testimonials</p>
+            <h2 className="font-display text-3xl md:text-5xl font-extrabold text-foreground mb-4">What Canadians Say</h2>
+            <p className="text-muted-foreground max-w-lg mx-auto">Real feedback from users who received independent guidance through our platform.</p>
+          </AnimatedSection>
+
+          {/* Desktop grid */}
+          <div className="hidden md:grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {testimonials.map((t, i) => (
+              <AnimatedSection key={t.name} delay={`[animation-delay:${i * 150}ms]`}>
+                <div className="bg-card rounded-2xl border p-6 h-full flex flex-col hover:shadow-lg transition-shadow">
+                  <Quote className="h-8 w-8 text-primary/20 mb-4" />
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-6 flex-1 italic">"{t.quote}"</p>
+                  <div className="flex gap-1 mb-4">
+                    {Array.from({ length: 5 }).map((_, si) => (
+                      <Star key={si} className={`h-4 w-4 ${si < t.stars ? "text-amber-400 fill-amber-400" : "text-border"}`} />
+                    ))}
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <img src={t.img} alt={t.name} className="h-10 w-10 rounded-full object-cover" />
+                    <div>
+                      <p className="font-display text-sm font-bold text-foreground">{t.name}</p>
+                      <p className="text-xs text-muted-foreground">{t.location}</p>
+                    </div>
+                  </div>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+
+          {/* Mobile carousel */}
+          <div className="md:hidden relative">
+            <div className="overflow-hidden">
+              <div className="flex transition-transform duration-500" style={{ transform: `translateX(-${currentTestimonial * 100}%)` }}>
+                {testimonials.map((t) => (
+                  <div key={t.name} className="min-w-full px-1">
+                    <div className="bg-card rounded-2xl border p-6">
+                      <Quote className="h-8 w-8 text-primary/20 mb-4" />
+                      <p className="text-muted-foreground text-sm leading-relaxed mb-6 italic">"{t.quote}"</p>
+                      <div className="flex gap-1 mb-4">
+                        {Array.from({ length: 5 }).map((_, si) => (
+                          <Star key={si} className={`h-4 w-4 ${si < t.stars ? "text-amber-400 fill-amber-400" : "text-border"}`} />
+                        ))}
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <img src={t.img} alt={t.name} className="h-10 w-10 rounded-full object-cover" />
+                        <div>
+                          <p className="font-display text-sm font-bold text-foreground">{t.name}</p>
+                          <p className="text-xs text-muted-foreground">{t.location}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="flex justify-center gap-2 mt-4">
+              {testimonials.map((_, i) => (
+                <button key={i} onClick={() => setCurrentTestimonial(i)} className={`h-2 rounded-full transition-all ${i === currentTestimonial ? "w-6 bg-primary" : "w-2 bg-border"}`} />
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What We Do NOT Do */}
       <section className="py-20 md:py-28">
         <div className="container">
           <div className="grid md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
@@ -308,8 +470,8 @@ const Index = () => {
       {/* CTA */}
       <section className="relative py-20 md:py-28 overflow-hidden">
         <div className="absolute inset-0">
-          <img src={carouselFamily} alt="Canadian families we assist" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-foreground/80" />
+          <img src={ctaGradient} alt="Network connectivity" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-foreground/70" />
         </div>
         <div className="container relative z-10 max-w-2xl text-center">
           <AnimatedSection>
