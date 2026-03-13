@@ -88,7 +88,7 @@ const testimonials = [
     name: "Priya & James K.",
     location: "Calgary, AB",
     stars: 4,
-    quote: "As newcomers to Canada, we needed help understanding internet and cable services. NorthBridge guided us with patience and clarity.",
+    quote: "As newcomers to Canada, we needed help understanding internet and cable services. Go Canada Wifi guided us with patience and clarity.",
     img: testimonial3,
   },
 ];
