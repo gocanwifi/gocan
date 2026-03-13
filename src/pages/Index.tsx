@@ -74,7 +74,7 @@ const testimonials = [
     name: "Sarah M.",
     location: "Toronto, ON",
     stars: 5,
-    quote: "NorthBridge helped me understand my broadband options clearly. Their independent guidance made the whole process so much easier to navigate.",
+    quote: "Go Canada Wifi helped me understand my broadband options clearly. Their independent guidance made the whole process so much easier to navigate.",
     img: testimonial1,
   },
   {
