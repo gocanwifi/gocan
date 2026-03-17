@@ -37,8 +37,8 @@ const SiteFooter = () => (
         <div>
           <span className="font-display font-semibold text-foreground mb-3 block">Contact</span>
           <div className="flex flex-col gap-2 text-sm text-muted-foreground">
-            <a href="tel:+18886517421" className="flex items-center gap-2 hover:text-foreground transition-colors">
-              <Phone className="h-4 w-4" /> (888) 651-7421
+            <a href="tel:+18882657538" className="flex items-center gap-2 hover:text-foreground transition-colors">
+              <Phone className="h-4 w-4" /> (888) 265-7538
             </a>
             <a href="mailto:support@gocanadawifi.com" className="flex items-center gap-2 hover:text-foreground transition-colors">
               <Mail className="h-4 w-4" /> support@gocanadawifi.com

@@ -169,14 +169,14 @@ const Index = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 mb-6 animate-fade-in" style={{ animationDelay: "0.35s" }}>
-              <a href="tel:+18886517421">
+              <a href="tel:+18882657538">
                 <Button size="lg" variant="hero" className="gap-2 text-base px-8 h-14 rounded-xl shadow-2xl">
-                  <PhoneCall className="h-4.5 w-4.5" /> Call Now (888) 651-7421
+                  <PhoneCall className="h-4.5 w-4.5" /> Call Now (888) 265-7538
                 </Button>
               </a>
-              <a href="tel:+18886517421">
+              <a href="tel:+18882657538">
                 <Button size="lg" className="gap-2 text-base px-8 h-14 rounded-xl border-2 border-primary-foreground/30 bg-primary-foreground/10 text-primary-foreground hover:bg-primary-foreground/20 font-semibold backdrop-blur-sm">
-                  <Phone className="h-4 w-4" /> Call Now (888) 651-7421
+                  <Phone className="h-4 w-4" /> Call Now (888) 265-7538
                 </Button>
               </a>
             </div>
@@ -351,9 +351,9 @@ const Index = () => {
                       <div className="bg-card p-8 md:p-12 flex flex-col justify-center border border-l-0">
                         <h3 className="font-display text-2xl font-bold text-foreground mb-3">{slide.title}</h3>
                         <p className="text-muted-foreground leading-relaxed mb-6">{slide.text}</p>
-                        <a href="tel:+18886517421">
+                        <a href="tel:+18882657538">
                           <Button variant="hero" className="gap-2 w-fit">
-                            Call Now (888) 651-7421 <ArrowRight className="h-4 w-4" />
+                            Call Now (888) 265-7538 <ArrowRight className="h-4 w-4" />
                           </Button>
                         </a>
                       </div>
@@ -531,14 +531,14 @@ const Index = () => {
               Speak with our team for general guidance related to internet, broadband, Wi-Fi, or cable TV services.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <a href="tel:+18886517421">
+              <a href="tel:+18882657538">
                 <Button size="lg" variant="hero" className="gap-2 text-base px-8 h-13 rounded-xl">
-                  <Phone className="h-4 w-4" /> Call Now (888) 651-7421
+                  <Phone className="h-4 w-4" /> Call Now (888) 265-7538
                 </Button>
               </a>
-              <a href="tel:+18886517421">
+              <a href="tel:+18882657538">
                 <Button size="lg" className="gap-2 text-base px-8 h-13 rounded-xl border-2 border-primary-foreground/30 bg-primary-foreground/10 text-primary-foreground hover:bg-primary-foreground/20 font-semibold backdrop-blur-sm">
-                  Call Now (888) 651-7421
+                  Call Now (888) 265-7538
                 </Button>
               </a>
             </div>

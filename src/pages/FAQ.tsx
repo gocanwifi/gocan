@@ -56,9 +56,9 @@ const FAQ = () => (
         <div className="mt-12 rounded-2xl hero-gradient p-8 text-center">
           <h3 className="font-display text-xl font-bold text-primary-foreground mb-2">Still have questions?</h3>
           <p className="text-primary-foreground/80 text-sm mb-5">Our independent support team is ready to help.</p>
-          <a href="tel:+18886517421">
+          <a href="tel:+18882657538">
             <button className="bg-primary-foreground text-primary font-semibold px-6 py-3 rounded-xl text-sm hover:opacity-90 transition-opacity inline-flex items-center gap-2">
-              <Phone className="h-4 w-4" /> Call Now (888) 651-7421
+              <Phone className="h-4 w-4" /> Call Now (888) 265-7538
             </button>
           </a>
         </div>
