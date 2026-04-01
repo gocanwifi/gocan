@@ -30,6 +30,7 @@ const SiteFooter = () => (
             <Link to="/terms" className="text-muted-foreground hover:text-foreground transition-colors">Terms & Conditions</Link>
             <Link to="/refund" className="text-muted-foreground hover:text-foreground transition-colors">Refund Policy</Link>
             <Link to="/disclaimer" className="text-muted-foreground hover:text-foreground transition-colors">Disclaimer</Link>
+            <Link to="/advertisement-disclosure" className="text-muted-foreground hover:text-foreground transition-colors">Advertisement Disclosure</Link>
           </div>
         </div>
 

@@ -1,56 +1,9 @@
 import PageWrapper from "@/components/PageWrapper";
 import DisclosureBanner from "@/components/DisclosureBanner";
-import { Phone, Mail, Send, Clock, Shield } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import { useToast } from "@/hooks/use-toast";
-import { useState } from "react";
-import { z } from "zod";
+import { Phone, Mail, Clock, Shield } from "lucide-react";
 import contactHero from "@/assets/contact-hero.jpg";
 
-const contactSchema = z.object({
-  name: z.string().trim().min(1, "Name is required").max(100, "Name must be under 100 characters"),
-  email: z.string().trim().email("Please enter a valid email").max(255, "Email must be under 255 characters"),
-  phone: z.string().trim().max(20, "Phone must be under 20 characters").optional().or(z.literal("")),
-  subject: z.string().trim().min(1, "Subject is required").max(200, "Subject must be under 200 characters"),
-  message: z.string().trim().min(1, "Message is required").max(1000, "Message must be under 1000 characters"),
-});
-
-type ContactForm = z.infer<typeof contactSchema>;
-
 const Contact = () => {
-  const { toast } = useToast();
-  const [form, setForm] = useState<ContactForm>({ name: "", email: "", phone: "", subject: "", message: "" });
-  const [errors, setErrors] = useState<Partial<Record<keyof ContactForm, string>>>({});
-  const [submitting, setSubmitting] = useState(false);
-
-  const handleChange = (field: keyof ContactForm, value: string) => {
-    setForm((prev) => ({ ...prev, [field]: value }));
-    if (errors[field]) setErrors((prev) => ({ ...prev, [field]: undefined }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const result = contactSchema.safeParse(form);
-    if (!result.success) {
-      const fieldErrors: Partial<Record<keyof ContactForm, string>> = {};
-      result.error.errors.forEach((err) => {
-        const field = err.path[0] as keyof ContactForm;
-        if (!fieldErrors[field]) fieldErrors[field] = err.message;
-      });
-      setErrors(fieldErrors);
-      return;
-    }
-    setSubmitting(true);
-    setTimeout(() => {
-      setSubmitting(false);
-      setForm({ name: "", email: "", phone: "", subject: "", message: "" });
-      setErrors({});
-      toast({ title: "Message Sent", description: "Thank you for reaching out. We will get back to you shortly." });
-    }, 1200);
-  };
 
   return (
     <PageWrapper>
@@ -116,56 +69,55 @@ const Contact = () => {
               <DisclosureBanner />
             </div>
 
-            {/* Right: contact form */}
+            {/* Right: contact information */}
             <div className="lg:col-span-3">
               <div className="rounded-2xl border bg-card p-8">
-                <h2 className="font-display text-2xl font-bold text-foreground mb-2">Send Us a Message</h2>
-                <p className="text-muted-foreground text-sm mb-8">Fill out the form and our independent support team will respond shortly.</p>
+                <h2 className="font-display text-2xl font-bold text-foreground mb-2">Get In Touch</h2>
+                <p className="text-muted-foreground text-sm mb-8">Contact our independent support team directly using the information provided.</p>
 
-                <form onSubmit={handleSubmit} className="space-y-5" noValidate>
-                  <div className="grid sm:grid-cols-2 gap-5">
-                    <div className="space-y-2">
-                      <Label htmlFor="name">Full Name *</Label>
-                      <Input id="name" placeholder="Your name" value={form.name} onChange={(e) => handleChange("name", e.target.value)} maxLength={100} />
-                      {errors.name && <p className="text-xs text-destructive">{errors.name}</p>}
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="email">Email *</Label>
-                      <Input id="email" type="email" placeholder="your@email.com" value={form.email} onChange={(e) => handleChange("email", e.target.value)} maxLength={255} />
-                      {errors.email && <p className="text-xs text-destructive">{errors.email}</p>}
-                    </div>
-                  </div>
-
-                  <div className="grid sm:grid-cols-2 gap-5">
-                    <div className="space-y-2">
-                      <Label htmlFor="phone">Phone (Optional)</Label>
-                      <Input id="phone" type="tel" placeholder="+1 (XXX) XXX-XXXX" value={form.phone} onChange={(e) => handleChange("phone", e.target.value)} maxLength={20} />
-                      {errors.phone && <p className="text-xs text-destructive">{errors.phone}</p>}
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="subject">Subject *</Label>
-                      <Input id="subject" placeholder="How can we help?" value={form.subject} onChange={(e) => handleChange("subject", e.target.value)} maxLength={200} />
-                      {errors.subject && <p className="text-xs text-destructive">{errors.subject}</p>}
+                <div className="space-y-6">
+                  <div className="rounded-xl border bg-muted/50 p-6">
+                    <h3 className="font-display text-lg font-bold text-foreground mb-4">Contact Methods</h3>
+                    <div className="space-y-4">
+                      <div>
+                        <p className="text-sm font-semibold text-foreground mb-1">Phone Support</p>
+                        <a href="tel:+18882657538" className="text-primary hover:underline font-medium">(888) 265-7538</a>
+                        <p className="text-xs text-muted-foreground mt-1">Available 24/7 for guidance</p>
+                      </div>
+                      <div>
+                        <p className="text-sm font-semibold text-foreground mb-1">Email Support</p>
+                        <a href="mailto:support@gocanadawifi.com" className="text-primary hover:underline font-medium break-all">support@gocanadawifi.com</a>
+                        <p className="text-xs text-muted-foreground mt-1">We typically respond within 24-48 hours</p>
+                      </div>
                     </div>
                   </div>
 
-                  <div className="space-y-2">
-                    <Label htmlFor="message">Message *</Label>
-                    <Textarea id="message" placeholder="Describe your question or concern..." rows={5} value={form.message} onChange={(e) => handleChange("message", e.target.value)} maxLength={1000} />
-                    <div className="flex justify-between">
-                      {errors.message ? <p className="text-xs text-destructive">{errors.message}</p> : <span />}
-                      <p className="text-xs text-muted-foreground">{form.message.length}/1000</p>
-                    </div>
+                  <div className="rounded-xl border bg-muted/50 p-6">
+                    <h3 className="font-display text-lg font-bold text-foreground mb-2">What to Expect</h3>
+                    <ul className="space-y-2 text-sm text-muted-foreground">
+                      <li className="flex gap-2">
+                        <span className="text-primary">•</span>
+                        <span>Independent third-party guidance and support</span>
+                      </li>
+                      <li className="flex gap-2">
+                        <span className="text-primary">•</span>
+                        <span>General information about internet and cable services</span>
+                      </li>
+                      <li className="flex gap-2">
+                        <span className="text-primary">•</span>
+                        <span>Assistance navigating service-related concerns</span>
+                      </li>
+                      <li className="flex gap-2">
+                        <span className="text-primary">•</span>
+                        <span>Service assistance fees may apply separately</span>
+                      </li>
+                    </ul>
                   </div>
 
-                  <Button type="submit" variant="hero" className="gap-2 w-full h-12 rounded-xl text-base" disabled={submitting}>
-                    {submitting ? "Sending..." : <><Send className="h-4 w-4" /> Send Message</>}
-                  </Button>
-
-                  <p className="text-xs text-muted-foreground text-center">
-                    By submitting, you acknowledge that Go Canada Wifi is an independent third-party provider.
+                  <p className="text-xs text-muted-foreground text-center pt-4">
+                    Go Canada Wifi is an independent third-party provider. We are not affiliated with any ISP or cable company.
                   </p>
-                </form>
+                </div>
               </div>
             </div>
           </div>
