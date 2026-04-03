@@ -1,4 +1,4 @@
-# Go Canada Wifi
+# Trustournet
 
 ## Project info
 

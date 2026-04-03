@@ -6,22 +6,22 @@ const sections = [
   { 
     icon: FileText, 
     title: "Agreement to Terms", 
-    text: "By accessing or using the Go Canada Wifi website and services, you agree to be bound by these Terms and Conditions. If you do not agree, please discontinue use immediately. You represent that you are at least 18 years of age and have the legal capacity to enter into this agreement."
+    text: "By accessing or using the Trustournet website and services, you agree to be bound by these Terms and Conditions. If you do not agree, please discontinue use immediately. You represent that you are at least 18 years of age and have the legal capacity to enter into this agreement."
   },
   { 
     icon: ShieldCheck, 
     title: "Nature of Services", 
-    text: "Go Canada Wifi is an independent third-party service assistance provider established in 2026. We provide general informational guidance and support related to internet, broadband, Wi-Fi, and cable TV services. We are NOT an ISP, telecommunications company, or cable provider. We do not provide actual internet connectivity, install equipment, or activate services. Our role is limited to providing independent guidance and informational assistance."
+    text: "Trustournet is an independent third-party service assistance provider established in 2026. We provide general informational guidance and support related to internet, broadband, Wi-Fi, and cable TV services. We are NOT an ISP, telecommunications company, or cable provider. We do not provide actual internet connectivity, install equipment, or activate services. Our role is limited to providing independent guidance and informational assistance."
   },
   { 
     icon: AlertCircle, 
     title: "No Affiliation or Authorization", 
-    text: "Go Canada Wifi is NOT affiliated with, authorized by, endorsed by, or connected with any internet service provider, cable company, or telecommunications provider. We have no partnership or agency relationship with any ISP. References to third-party provider names are made solely for informational purposes and do not imply endorsement or affiliation. We are not responsible for the actions, services, or billing practices of any third-party provider."
+    text: "Trustournet is NOT affiliated with, authorized by, endorsed by, or connected with any internet service provider, cable company, or telecommunications provider. We have no partnership or agency relationship with any ISP. References to third-party provider names are made solely for informational purposes and do not imply endorsement or affiliation. We are not responsible for the actions, services, or billing practices of any third-party provider."
   },
   { 
     icon: DollarSign, 
     title: "Service Fees and Payment", 
-    text: "Go Canada Wifi charges service assistance fees for providing independent guidance and support. These fees are SEPARATE from and IN ADDITION to any charges billed by your actual service provider. Our fees compensate us for our time and expertise. Payment may be required before, during, or after service delivery. Fees are non-refundable except as outlined in our Refund Policy. You are responsible for providing accurate billing information."
+    text: "Trustournet charges service assistance fees for providing independent guidance and support. These fees are SEPARATE from and IN ADDITION to any charges billed by your actual service provider. Our fees compensate us for our time and expertise. Payment may be required before, during, or after service delivery. Fees are non-refundable except as outlined in our Refund Policy. You are responsible for providing accurate billing information."
   },
   { 
     icon: Ban, 
@@ -52,7 +52,7 @@ const Terms = () => (
         <h1 className="font-display text-4xl md:text-5xl font-extrabold text-primary-foreground mb-3">Terms & Conditions</h1>
         <p className="text-primary-foreground/70 text-sm mb-4">Last updated: March 2026</p>
         <p className="text-primary-foreground/80 text-base leading-relaxed max-w-3xl">
-          Please read these Terms carefully before using Go Canada Wifi. By using our services, you agree to be bound by these terms.
+          Please read these Terms carefully before using Trustournet. By using our services, you agree to be bound by these terms.
         </p>
       </div>
     </section>
@@ -94,7 +94,7 @@ const Terms = () => (
         <div className="mt-12 rounded-2xl border bg-muted/50 p-6">
           <h3 className="font-display text-base font-bold text-foreground mb-3">Questions About These Terms?</h3>
           <p className="text-muted-foreground text-sm leading-relaxed">
-            Contact us at <a href="mailto:support@gocanadawifi.com" className="text-primary hover:underline">support@gocanadawifi.com</a> or 
+            Contact us at <a href="mailto:support@trustournet.com" className="text-primary hover:underline">support@trustournet.com</a> or 
             call <a href="tel:+18882657538" className="text-primary hover:underline">(888) 265-7538</a>.
           </p>
         </div>

@@ -16,7 +16,7 @@ const sections = [
   { 
     icon: Mail, 
     title: "How to Request a Refund", 
-    text: "Email support@gocanadawifi.com with subject 'Refund Request' including: your name, contact info, service date, description of services, and reason for refund. Or call (888) 265-7538 with your service details ready. Provide detailed information about your situation to help us process your request efficiently."
+    text: "Email support@trustournet.com with subject 'Refund Request' including: your name, contact info, service date, description of services, and reason for refund. Or call (888) 265-7538 with your service details ready. Provide detailed information about your situation to help us process your request efficiently."
   },
   { 
     icon: Settings, 
@@ -26,12 +26,12 @@ const sections = [
   { 
     icon: DollarSign, 
     title: "Important Notes", 
-    text: "This policy applies ONLY to Go Canada Wifi service fees, NOT to charges from internet/cable providers. Partial refunds may be offered based on circumstances. Fees for fully delivered services are typically non-refundable. Contact us before initiating chargebacks. All refund decisions made at our discretion."
+    text: "This policy applies ONLY to Trustournet service fees, NOT to charges from internet/cable providers. Partial refunds may be offered based on circumstances. Fees for fully delivered services are typically non-refundable. Contact us before initiating chargebacks. All refund decisions made at our discretion."
   },
   { 
     icon: AlertTriangle, 
     title: "What We Cannot Refund", 
-    text: "We cannot refund: fees billed by ISPs or cable companies, provider subscription fees, installation/equipment charges from providers, or early termination fees. For provider-related refunds, contact them directly. Our refund policy covers only Go Canada Wifi assistance fees."
+    text: "We cannot refund: fees billed by ISPs or cable companies, provider subscription fees, installation/equipment charges from providers, or early termination fees. For provider-related refunds, contact them directly. Our refund policy covers only Trustournet assistance fees."
   }
 ];
 
@@ -42,7 +42,7 @@ const Refund = () => (
         <h1 className="font-display text-4xl md:text-5xl font-extrabold text-primary-foreground mb-3">Refund Policy</h1>
         <p className="text-primary-foreground/70 text-sm mb-4">Last updated: March 2026</p>
         <p className="text-primary-foreground/80 text-base leading-relaxed max-w-3xl">
-          This policy outlines the conditions under which refunds may be requested for Go Canada Wifi service assistance fees. 
+          This policy outlines the conditions under which refunds may be requested for Trustournet service assistance fees. 
           Please read carefully to understand your refund rights and our refund process.
         </p>
       </div>
@@ -115,14 +115,14 @@ const Refund = () => (
             <div>
               <h2 className="font-display text-xl font-bold text-foreground mb-2">Submit a Refund Request</h2>
               <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                To request a refund for Go Canada Wifi service assistance fees, please contact us using one of the methods below:
+                To request a refund for Trustournet service assistance fees, please contact us using one of the methods below:
               </p>
             </div>
           </div>
           <div className="grid md:grid-cols-2 gap-4 text-sm">
             <div className="rounded-lg bg-muted/50 p-4">
               <p className="font-semibold text-foreground mb-1">Email</p>
-              <a href="mailto:support@gocanadawifi.com" className="text-primary hover:underline block mb-2">support@gocanadawifi.com</a>
+              <a href="mailto:support@trustournet.com" className="text-primary hover:underline block mb-2">support@trustournet.com</a>
               <p className="text-xs text-muted-foreground">Include "Refund Request" in subject line</p>
             </div>
             <div className="rounded-lg bg-muted/50 p-4">

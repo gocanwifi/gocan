@@ -37,7 +37,7 @@ const values = [
 ];
 
 const milestones = [
-  { year: "2026", text: "Go Canada Wifi launched as an independent assistance platform in Canada." },
+  { year: "2026", text: "Trustournet launched as an independent assistance platform in Canada." },
   { year: "2026", text: "Assembled a dedicated team of independent service advisors." },
   { year: "2026", text: "Began assisting thousands of users with internet and cable TV guidance." },
 ];
@@ -47,7 +47,7 @@ const About = () => (
     {/* Hero */}
     <section className="relative overflow-hidden">
       <div className="absolute inset-0">
-        <img src={aboutTeam} alt="Go Canada Wifi team" className="w-full h-full object-cover" />
+        <img src={aboutTeam} alt="Trustournet team" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-foreground/90 via-foreground/75 to-foreground/50" />
       </div>
       <div className="container relative z-10 py-24 md:py-32">
@@ -58,7 +58,7 @@ const About = () => (
             <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">Honest Assistance</span>
           </h1>
           <p className="text-lg text-primary-foreground/80 leading-relaxed animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            Go Canada Wifi is an independent third-party service assistance platform launched in 2026, helping Canadians navigate internet, broadband, Wi-Fi, and cable TV services.
+            Trustournet is an independent third-party service assistance platform launched in 2026, helping Canadians navigate internet, broadband, Wi-Fi, and cable TV services.
           </p>
         </div>
       </div>

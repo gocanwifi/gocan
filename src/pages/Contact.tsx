@@ -39,13 +39,13 @@ const Contact = () => {
                 </div>
               </a>
 
-              <a href="mailto:support@gocanadawifi.com" className="rounded-2xl border bg-card p-6 flex gap-4 items-center hover:shadow-lg transition-shadow block">
+              <a href="mailto:support@trustournet.com" className="rounded-2xl border bg-card p-6 flex gap-4 items-center hover:shadow-lg transition-shadow block">
                 <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
                   <Mail className="h-5 w-5 text-primary" />
                 </div>
                 <div>
                   <h3 className="font-display font-bold text-foreground text-sm">Email</h3>
-                  <p className="text-muted-foreground text-sm break-all">support@gocanadawifi.com</p>
+                  <p className="text-muted-foreground text-sm break-all">support@trustournet.com</p>
                 </div>
               </a>
 
@@ -62,7 +62,7 @@ const Contact = () => {
               <div className="rounded-2xl border bg-card p-6">
                 <h3 className="font-display text-sm font-bold text-foreground mb-2">Call Greeting</h3>
                 <p className="text-muted-foreground text-xs leading-relaxed italic">
-                  "Thank you for calling Go Canada Wifi, an independent service assistance platform. We provide general guidance related to internet and cable services."
+                  "Thank you for calling Trustournet, an independent service assistance platform. We provide general guidance related to internet and cable services."
                 </p>
               </div>
 
@@ -86,7 +86,7 @@ const Contact = () => {
                       </div>
                       <div>
                         <p className="text-sm font-semibold text-foreground mb-1">Email Support</p>
-                        <a href="mailto:support@gocanadawifi.com" className="text-primary hover:underline font-medium break-all">support@gocanadawifi.com</a>
+                        <a href="mailto:support@trustournet.com" className="text-primary hover:underline font-medium break-all">support@trustournet.com</a>
                         <p className="text-xs text-muted-foreground mt-1">We typically respond within 24-48 hours</p>
                       </div>
                     </div>
@@ -115,7 +115,7 @@ const Contact = () => {
                   </div>
 
                   <p className="text-xs text-muted-foreground text-center pt-4">
-                    Go Canada Wifi is an independent third-party provider. We are not affiliated with any ISP or cable company.
+                    Trustournet is an independent third-party provider. We are not affiliated with any ISP or cable company.
                   </p>
                 </div>
               </div>

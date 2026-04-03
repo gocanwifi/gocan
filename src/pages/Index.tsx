@@ -74,7 +74,7 @@ const testimonials = [
     name: "Sarah M.",
     location: "Toronto, ON",
     stars: 5,
-    quote: "Go Canada Wifi helped me understand my broadband options clearly. Their independent guidance made the whole process so much easier to navigate.",
+    quote: "Trustournet helped me understand my broadband options clearly. Their independent guidance made the whole process so much easier to navigate.",
     img: testimonial1,
   },
   {
@@ -88,7 +88,7 @@ const testimonials = [
     name: "Priya & James K.",
     location: "Calgary, AB",
     stars: 4,
-    quote: "As newcomers to Canada, we needed help understanding internet and cable services. Go Canada Wifi guided us with patience and clarity.",
+    quote: "As newcomers to Canada, we needed help understanding internet and cable services. Trustournet guided us with patience and clarity.",
     img: testimonial3,
   },
 ];

@@ -23,7 +23,7 @@ const FAQ = () => (
         </div>
         <h1 className="font-display text-4xl md:text-5xl font-extrabold text-primary-foreground mb-3">Frequently Asked Questions</h1>
         <p className="text-primary-foreground/70 text-sm">
-          Find answers to common questions about Go Canada Wifi and our independent guidance services.
+          Find answers to common questions about Trustournet and our independent guidance services.
         </p>
       </div>
     </section>

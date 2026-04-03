@@ -6,7 +6,7 @@ const sections = [
   { 
     icon: Shield, 
     title: "Independent Service Provider", 
-    text: "Go Canada Wifi is an independent third-party service assistance provider established in 2026. We are NOT an ISP, cable company, or telecommunications provider. We do not own networks, provide connectivity, or deliver internet/cable services. We operate independently with no ownership ties to any service provider. Our business focuses exclusively on providing informational guidance and assistance."
+    text: "Trustournet is an independent third-party service assistance provider established in 2026. We are NOT an ISP, cable company, or telecommunications provider. We do not own networks, provide connectivity, or deliver internet/cable services. We operate independently with no ownership ties to any service provider. Our business focuses exclusively on providing informational guidance and assistance."
   },
   { 
     icon: AlertCircle, 
@@ -36,7 +36,7 @@ const sections = [
   { 
     icon: Info, 
     title: "User Responsibility", 
-    text: "Users must verify all information, pricing, availability, and contract terms directly with service providers before making commitments. Provider offerings and prices change frequently. We cannot guarantee current accuracy. Always obtain direct confirmation from providers. Read all contracts carefully. All contractual relationships are directly between you and your chosen provider, with no involvement from Go Canada Wifi."
+    text: "Users must verify all information, pricing, availability, and contract terms directly with service providers before making commitments. Provider offerings and prices change frequently. We cannot guarantee current accuracy. Always obtain direct confirmation from providers. Read all contracts carefully. All contractual relationships are directly between you and your chosen provider, with no involvement from Trustournet."
   },
 ];
 
@@ -47,7 +47,7 @@ const AdvertisementDisclosure = () => (
         <h1 className="font-display text-4xl md:text-5xl font-extrabold text-primary-foreground mb-3">Advertisement Disclosure</h1>
         <p className="text-primary-foreground/70 text-sm mb-4">Last updated: March 2026</p>
         <p className="text-primary-foreground/80 text-base leading-relaxed max-w-3xl">
-          This disclosure provides complete transparency about Go Canada Wifi's business model, revenue sources, 
+          This disclosure provides complete transparency about Trustournet's business model, revenue sources, 
           and relationships (or lack thereof) with internet service providers and cable companies.
         </p>
       </div>
@@ -64,7 +64,7 @@ const AdvertisementDisclosure = () => (
             <div>
               <h2 className="font-display text-xl font-bold text-foreground mb-2">Complete Transparency Statement</h2>
               <p className="text-muted-foreground text-sm leading-relaxed mb-3">
-                Go Canada Wifi operates as an <strong>independent third-party service assistance provider</strong>. We want to be completely transparent 
+                Trustournet operates as an <strong>independent third-party service assistance provider</strong>. We want to be completely transparent 
                 about our business model and how we generate revenue:
               </p>
             </div>
@@ -115,7 +115,7 @@ const AdvertisementDisclosure = () => (
             </div>
             <div className="rounded-lg bg-muted/50 p-4">
               <p className="font-semibold text-foreground mb-1">Email</p>
-              <a href="mailto:support@gocanadawifi.com" className="text-primary hover:underline block">support@gocanadawifi.com</a>
+              <a href="mailto:support@trustournet.com" className="text-primary hover:underline block">support@trustournet.com</a>
             </div>
           </div>
         </div>

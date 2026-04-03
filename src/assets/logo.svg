@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 80" fill="none">
+  <!-- Shield / network icon -->
+  <g>
+    <!-- Outer shield shape -->
+    <path d="M18 8 L36 4 L54 8 L54 32 C54 46 36 56 36 56 C36 56 18 46 18 32 Z" fill="#dc2626"/>
+    <!-- Inner shield glow -->
+    <path d="M24 13 L36 10 L48 13 L48 32 C48 42 36 50 36 50 C36 50 24 42 24 32 Z" fill="#b91c1c"/>
+    <!-- Network nodes -->
+    <circle cx="36" cy="24" r="3.5" fill="white"/>
+    <circle cx="27" cy="33" r="2.5" fill="white"/>
+    <circle cx="45" cy="33" r="2.5" fill="white"/>
+    <!-- Network lines -->
+    <line x1="36" y1="24" x2="27" y2="33" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="36" y1="24" x2="45" y2="33" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="27" y1="33" x2="45" y2="33" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Brand name text -->
+  <!-- "Trust" in white -->
+  <text x="64" y="36" font-family="'Segoe UI', Arial, sans-serif" font-size="22" font-weight="700" fill="white" letter-spacing="-0.3">Trust</text>
+  <!-- "our" in light gray -->
+  <text x="116" y="36" font-family="'Segoe UI', Arial, sans-serif" font-size="22" font-weight="400" fill="#94a3b8" letter-spacing="-0.3">our</text>
+  <!-- "net" in red -->
+  <text x="147" y="36" font-family="'Segoe UI', Arial, sans-serif" font-size="22" font-weight="700" fill="#dc2626" letter-spacing="-0.3">net</text>
+
+  <!-- Tagline -->
+  <text x="64" y="52" font-family="'Segoe UI', Arial, sans-serif" font-size="9" font-weight="400" fill="#64748b" letter-spacing="1.5">INDEPENDENT SERVICE GUIDANCE</text>
+</svg>

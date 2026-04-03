@@ -6,7 +6,7 @@ const sections = [
   { 
     icon: Database, 
     title: "Information We Collect", 
-    text: "We collect personal information that you voluntarily provide when you contact us for assistance, including your name, email address, phone number, and details about your service inquiries. We collect this information when you reach out via phone at (888) 265-7538, email at support@gocanadawifi.com, or through our website. We do NOT collect passwords, payment card details directly through forms, or information from your service provider accounts."
+    text: "We collect personal information that you voluntarily provide when you contact us for assistance, including your name, email address, phone number, and details about your service inquiries. We collect this information when you reach out via phone at (888) 265-7538, email at support@trustournet.com, or through our website. We do NOT collect passwords, payment card details directly through forms, or information from your service provider accounts."
   },
   { 
     icon: Eye, 
@@ -21,7 +21,7 @@ const sections = [
   { 
     icon: Lock, 
     title: "No Collection of Provider Passwords", 
-    text: "Go Canada Wifi never requests, collects, or stores passwords or login credentials for your internet, cable, or streaming service provider accounts. Our assistance services are designed to provide guidance without requiring access to your provider accounts. If anyone claiming to represent us asks for your passwords, do not provide them and report this immediately."
+    text: "Trustournet never requests, collects, or stores passwords or login credentials for your internet, cable, or streaming service provider accounts. Our assistance services are designed to provide guidance without requiring access to your provider accounts. If anyone claiming to represent us asks for your passwords, do not provide them and report this immediately."
   },
   { 
     icon: Globe, 
@@ -52,7 +52,7 @@ const Privacy = () => (
         <h1 className="font-display text-4xl md:text-5xl font-extrabold text-primary-foreground mb-3">Privacy Policy</h1>
         <p className="text-primary-foreground/70 text-sm mb-4">Last updated: March 2026</p>
         <p className="text-primary-foreground/80 text-base leading-relaxed max-w-3xl">
-          This Privacy Policy describes how Go Canada Wifi collects, uses, and protects your personal information.
+          This Privacy Policy describes how Trustournet collects, uses, and protects your personal information.
         </p>
       </div>
     </section>
@@ -96,7 +96,7 @@ const Privacy = () => (
             Contact us to exercise your privacy rights or ask questions about this policy:
           </p>
           <div className="flex flex-wrap gap-4 text-sm">
-            <a href="mailto:support@gocanadawifi.com" className="text-primary hover:underline">support@gocanadawifi.com</a>
+            <a href="mailto:support@trustournet.com" className="text-primary hover:underline">support@trustournet.com</a>
             <a href="tel:+18882657538" className="text-primary hover:underline">(888) 265-7538</a>
           </div>
         </div>

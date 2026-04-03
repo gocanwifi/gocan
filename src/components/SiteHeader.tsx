@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo.svg";
 
 const navLinks = [
   { to: "/", label: "Home" },
@@ -22,7 +22,7 @@ const SiteHeader = () => {
         <div className="hidden md:flex items-center justify-between h-24">
           {/* Left Logo */}
           <Link to="/" className="flex items-center flex-shrink-0">
-            <img src={logo} alt="Go Canada Wifi" className="h-32 w-32 object-contain" />
+            <img src={logo} alt="Trustournet" className="h-44 w-44 object-contain" />
           </Link>
 
           {/* Centered Menu */}
@@ -55,7 +55,7 @@ const SiteHeader = () => {
         {/* Mobile layout */}
         <div className="md:hidden flex items-center justify-between h-20">
           <Link to="/" className="flex items-center">
-            <img src={logo} alt="Go Canada Wifi" className="h-20 w-20 object-contain" />
+            <img src={logo} alt="Trustournet" className="h-28 w-28 object-contain" />
           </Link>
           <button className="p-2 text-white" onClick={() => setOpen(!open)} aria-label="Toggle menu">
             {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
