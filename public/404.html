@@ -4,9 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Trustournet</title>
-  <meta http-equiv="refresh" content="0;URL='/'"></meta>
+  <script>
+    // Redirect to home page using JavaScript to preserve the SPA routing
+    // Store the current path for potential future use
+    sessionStorage.setItem('redirectPath', location.pathname + location.search + location.hash);
+    // Use replace to avoid adding to browser history
+    window.location.replace('https://trustournet.com' + location.pathname + location.search + location.hash);
+  </script>
 </head>
 <body>
   <!-- Single Page Application - Redirecting to home -->
+  <p>Redirecting...</p>
 </body>
 </html>
