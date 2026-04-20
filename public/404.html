@@ -5,15 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Trustournet</title>
   <script>
-    // Redirect to home page using JavaScript to preserve the SPA routing
-    // Store the current path for potential future use
-    sessionStorage.setItem('redirectPath', location.pathname + location.search + location.hash);
-    // Use replace to avoid adding to browser history
-    window.location.replace('https://trustournet.com' + location.pathname + location.search + location.hash);
+    // GitHub Pages SPA redirect for React Router
+    // Store the path in sessionStorage so the app can restore it
+    sessionStorage.setItem('redirect', location.pathname.slice(0, -1) + location.search + location.hash);
   </script>
+  <meta http-equiv="refresh" content="0;URL='/index.html'">
 </head>
 <body>
-  <!-- Single Page Application - Redirecting to home -->
-  <p>Redirecting...</p>
+  <!-- Single Page Application - Redirecting -->
 </body>
 </html>
