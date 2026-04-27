@@ -15,7 +15,7 @@ const Contact = () => {
         </div>
         <div className="container relative z-10 max-w-3xl">
           <div className="trust-badge inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-xs font-semibold mb-5">
-            <Shield className="h-3.5 w-3.5" /> Independent Assistance
+            <Shield className="h-3.5 w-3.5" /> Service Assistance
           </div>
           <h1 className="font-display text-4xl md:text-5xl font-extrabold text-primary-foreground mb-4">Contact Us</h1>
           <p className="text-primary-foreground/80 text-lg max-w-xl">
@@ -62,7 +62,7 @@ const Contact = () => {
               <div className="rounded-2xl border bg-card p-6">
                 <h3 className="font-display text-sm font-bold text-foreground mb-2">Call Greeting</h3>
                 <p className="text-muted-foreground text-xs leading-relaxed italic">
-                  "Thank you for calling Trustournet, an independent service assistance platform. We provide general guidance related to internet and cable services."
+                  "Thank you for calling Trustournet, a third-party service assistance platform. We provide general guidance related to internet and cable services."
                 </p>
               </div>
 
@@ -73,7 +73,7 @@ const Contact = () => {
             <div className="lg:col-span-3">
               <div className="rounded-2xl border bg-card p-8">
                 <h2 className="font-display text-2xl font-bold text-foreground mb-2">Get In Touch</h2>
-                <p className="text-muted-foreground text-sm mb-8">Contact our independent support team directly using the information provided.</p>
+                <p className="text-muted-foreground text-sm mb-8">Contact our support team directly using the information provided.</p>
 
                 <div className="space-y-6">
                   <div className="rounded-xl border bg-muted/50 p-6">
@@ -97,7 +97,7 @@ const Contact = () => {
                     <ul className="space-y-2 text-sm text-muted-foreground">
                       <li className="flex gap-2">
                         <span className="text-primary">•</span>
-                        <span>Independent third-party guidance and support</span>
+                        <span>Third-party guidance and informational support</span>
                       </li>
                       <li className="flex gap-2">
                         <span className="text-primary">•</span>

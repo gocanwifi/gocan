@@ -46,8 +46,8 @@ const SiteHeader = () => {
           <a href="tel:+18882657538">
             <Button size="default" className="bg-red-600 hover:bg-red-700 text-white gap-2">
               <Phone className="h-4 w-4" />
-              <span className="hidden lg:inline">Call Now (888) 265-7538</span>
-              <span className="lg:hidden">Call Now</span>
+              <span className="hidden lg:inline">Call Our Advisors (888) 265-7538</span>
+              <span className="lg:hidden">Our Advisors</span>
             </Button>
           </a>
         </div>
@@ -80,7 +80,7 @@ const SiteHeader = () => {
           ))}
           <a href="tel:+18882657538" className="block mt-3">
             <Button size="default" className="w-full bg-red-600 hover:bg-red-700 text-white gap-2">
-              <Phone className="h-4 w-4" /> Call Now (888) 265-7538
+              <Phone className="h-4 w-4" /> Call Our Advisors (888) 265-7538
             </Button>
           </a>
         </nav>

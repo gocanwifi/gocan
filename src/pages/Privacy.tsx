@@ -41,7 +41,7 @@ const sections = [
   { 
     icon: UserCheck, 
     title: "Your Privacy Rights", 
-    text: "Under Canadian privacy laws (PIPEDA), you may have rights to access, correct, delete, or restrict processing of your personal information. You can withdraw consent, request data portability, or lodge complaints with privacy authorities. To exercise these rights, contact us using the information below. We respond to requests within 30 days in accordance with applicable law."
+    text: "Under applicable privacy laws (including PIPEDA in Canada and applicable US state and federal privacy regulations), you may have rights to access, correct, delete, or restrict processing of your personal information. You can withdraw consent, request data portability, or lodge complaints with privacy authorities. To exercise these rights, contact us using the information below. We respond to requests within 30 days in accordance with applicable law."
   },
 ];
 

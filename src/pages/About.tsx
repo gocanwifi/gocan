@@ -30,15 +30,15 @@ const AnimatedSection = ({ children, className = "", delay = "" }: { children: R
 };
 
 const values = [
-  { icon: Shield, title: "Independence", desc: "We operate independently of all telecom and cable service providers." },
+  { icon: Shield, title: "Independence", desc: "We operate without ties to any telecom or cable service provider." },
   { icon: Eye, title: "Transparency", desc: "We clearly communicate what we do and what we do not do." },
   { icon: Heart, title: "Helpfulness", desc: "We aim to inform and guide users through service-related concerns." },
   { icon: Users, title: "Accessibility", desc: "We strive to make our assistance available to anyone who needs guidance." },
 ];
 
 const milestones = [
-  { year: "2026", text: "Trustournet launched as an independent assistance platform in Canada." },
-  { year: "2026", text: "Assembled a dedicated team of independent service advisors." },
+  { year: "2026", text: "Trustournet launched as a third-party assistance platform serving Canada and the USA." },
+  { year: "2026", text: "Assembled a dedicated team of service advisors." },
   { year: "2026", text: "Began assisting thousands of users with internet and cable TV guidance." },
 ];
 
@@ -54,11 +54,11 @@ const About = () => (
         <div className="max-w-2xl">
           <p className="text-sm font-semibold text-accent uppercase tracking-wider mb-3 animate-fade-in">About Us</p>
           <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary-foreground leading-tight mb-5 animate-fade-in" style={{ animationDelay: "0.1s" }}>
-            Independent Guidance,{" "}
+            Expert Guidance,{" "}
             <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">Honest Assistance</span>
           </h1>
           <p className="text-lg text-primary-foreground/80 leading-relaxed animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            Trustournet is an independent third-party service assistance platform launched in 2026, helping Canadians navigate internet, broadband, Wi-Fi, and cable TV services.
+            Trustournet is an independent third-party service assistance platform launched in 2026, helping Canadians and Americans navigate internet, broadband, Wi-Fi, and cable TV services.
           </p>
         </div>
       </div>
@@ -70,7 +70,7 @@ const About = () => (
         <div className="grid md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
           <AnimatedSection>
             <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-2">Our Mission</p>
-            <h2 className="font-display text-3xl md:text-4xl font-extrabold text-foreground mb-5">Helping Canadians Understand Their Connectivity Options</h2>
+            <h2 className="font-display text-3xl md:text-4xl font-extrabold text-foreground mb-5">Helping Canadians & Americans Understand Their Connectivity Options</h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Our goal is to help users better understand internet, broadband, Wi-Fi, and cable TV services by providing general informational guidance and assistance.
             </p>
@@ -78,10 +78,10 @@ const About = () => (
               We support individuals who are seeking clarity about connectivity concerns, service processes, or general provider-related questions.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              We do not deliver internet services and we do not represent any telecom or cable provider. Our assistance is independent, transparent, and focused on providing helpful guidance.
+              We do not deliver internet services and we do not represent any telecom or cable provider. Our assistance is unbiased, transparent, and focused on providing helpful guidance.
             </p>
             <div className="flex flex-col gap-2">
-              {["Independent third-party platform", "No telecom affiliation", "Transparent service fees", "General informational guidance"].map((item) => (
+              {["Third-party platform", "No telecom affiliation", "Transparent service fees", "General informational guidance"].map((item) => (
                 <div key={item} className="flex items-center gap-2 text-sm">
                   <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
                   <span className="text-foreground">{item}</span>
@@ -99,7 +99,7 @@ const About = () => (
                   <Target className="h-5 w-5 text-primary" />
                   <span className="font-display text-sm font-bold text-foreground">Est. 2026</span>
                 </div>
-                <p className="text-xs text-muted-foreground mt-1">Canadian startup</p>
+                <p className="text-xs text-muted-foreground mt-1">Canada & USA</p>
               </div>
             </div>
           </AnimatedSection>
@@ -164,11 +164,12 @@ const About = () => (
       </div>
       <div className="container relative z-10 text-center max-w-2xl">
         <AnimatedSection>
-          <h2 className="font-display text-3xl md:text-4xl font-extrabold text-primary-foreground mb-4">Ready for Independent Guidance?</h2>
-          <p className="text-primary-foreground/75 mb-6 text-lg">Our team is here to assist you with any internet or cable TV-related questions.</p>
+          <h2 className="font-display text-3xl md:text-4xl font-extrabold text-primary-foreground mb-4">Ready to Get Started?</h2>
+          <p className="text-primary-foreground/75 mb-2 text-lg">Our advisors are here to help with internet or cable TV-related questions.</p>
+          <p className="text-xs text-primary-foreground/60 mb-5">We are not affiliated with any ISP. Service assistance fees apply separately.</p>
           <a href="tel:+18882657538">
             <button className="hero-gradient text-primary-foreground font-semibold px-8 py-3 rounded-xl text-base hover:opacity-90 transition-opacity">
-              Call Now (888) 265-7538
+              Call Our Advisors (888) 265-7538
             </button>
           </a>
         </AnimatedSection>

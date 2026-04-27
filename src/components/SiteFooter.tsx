@@ -49,11 +49,13 @@ const SiteFooter = () => (
       </div>
 
       {/* Disclosure */}
-      <div className="mt-10 pt-6 border-t">
-        <p className="disclosure-banner rounded-lg px-4 py-3 text-xs leading-relaxed text-center">
-          Trustournet is an independent third-party service assistance startup launched in 2026. We are not affiliated with, authorized by, or endorsed by any internet, broadband, cable TV, or streaming service provider. All trademarks belong to their respective owners.
-        </p>
-        <p className="text-center text-xs text-gray-500 mt-4">
+      <div className="mt-10 pt-6 border-t border-slate-700">
+        <div className="rounded-xl border-2 border-amber-400/40 bg-amber-400/10 px-5 py-4 mb-4">
+          <p className="text-xs leading-relaxed text-amber-200 text-center font-medium">
+            <strong className="text-amber-300 uppercase tracking-wide">⚠ Notice:</strong> Trustournet is a third-party service assistance company. We are <strong>not affiliated with, authorized by, or endorsed by</strong> any internet, broadband, cable TV, or streaming service provider. Our service fees are <strong>separate</strong> from any charges billed by your actual internet or cable provider. All trademarks and brand names belong to their respective owners.
+          </p>
+        </div>
+        <p className="text-center text-xs text-gray-500">
           © {new Date().getFullYear()} Trustournet. All rights reserved.
         </p>
       </div>

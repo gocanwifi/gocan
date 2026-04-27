@@ -45,7 +45,7 @@ const stats = [
   { value: "10K+", label: "Users Assisted", icon: Users },
   { value: "24/7", label: "Guidance Available", icon: Clock },
   { value: "2026", label: "Founded", icon: Shield },
-  { value: "100%", label: "Independent", icon: Headphones },
+  { value: "100%", label: "Unbiased", icon: Headphones },
 ];
 
 const weDoItems = [
@@ -64,9 +64,9 @@ const weDoNotItems = [
 ];
 
 const carouselSlides = [
-  { img: carouselSupport, title: "Dedicated Assistance Team", text: "Our independent advisors are here to help you navigate connectivity concerns with clarity and care." },
+  { img: carouselSupport, title: "Dedicated Assistance Team", text: "Our advisors are here to help you navigate connectivity concerns with clarity and care." },
   { img: carouselNetwork, title: "Understanding Your Network", text: "We help you understand how internet and broadband services work so you can make informed decisions." },
-  { img: carouselFamily, title: "Supporting Canadian Families", text: "From Wi-Fi setup guidance to cable TV questions, we assist families across Canada with independent support." },
+  { img: carouselFamily, title: "Supporting Families Across Canada & USA", text: "From Wi-Fi setup guidance to cable TV questions, we assist families across Canada and the USA with dedicated support." },
 ];
 
 const testimonials = [
@@ -74,21 +74,21 @@ const testimonials = [
     name: "Sarah M.",
     location: "Toronto, ON",
     stars: 5,
-    quote: "Trustournet helped me understand my broadband options clearly. Their independent guidance made the whole process so much easier to navigate.",
+    quote: "Trustournet helped me understand my broadband options clearly. Their unbiased guidance made the whole process so much easier to navigate.",
     img: testimonial1,
   },
   {
     name: "David R.",
     location: "Vancouver, BC",
     stars: 5,
-    quote: "I appreciated how transparent they were about being independent. The guidance I received about Wi-Fi connectivity was exactly what I needed.",
+    quote: "I appreciated how transparent they were. The guidance I received about Wi-Fi connectivity was exactly what I needed.",
     img: testimonial2,
   },
   {
     name: "Priya & James K.",
     location: "Calgary, AB",
     stars: 4,
-    quote: "As newcomers to Canada, we needed help understanding internet and cable services. Trustournet guided us with patience and clarity.",
+    quote: "As newcomers to Canada and the USA, we needed help understanding internet and cable services. Trustournet guided us with patience and clarity.",
     img: testimonial3,
   },
 ];
@@ -156,33 +156,28 @@ const Index = () => {
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/20 bg-primary-foreground/10 backdrop-blur-md px-4 py-2 text-xs font-semibold text-primary-foreground mb-8 animate-fade-in">
               <Shield className="h-3.5 w-3.5" />
-              Independent Third-Party · Est. 2026 · Canada
+              Third-Party Guidance · Est. 2026 · Canada & USA
             </div>
 
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-primary-foreground leading-[1.08] mb-6 animate-fade-in" style={{ animationDelay: "0.15s" }}>
-              Independent Internet & Cable{" "}
-              <span className="text-accent">Service Assistance</span>
+              Internet & Cable{" "}
+              <span className="text-accent">Service Guidance</span>
             </h1>
 
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-10 max-w-xl animate-fade-in" style={{ animationDelay: "0.25s" }}>
-              Get general guidance and informational support related to internet, broadband, Wi-Fi, and cable TV services from an independent third-party assistance provider.
+              We provide general informational guidance related to internet, broadband, Wi-Fi, and cable TV services. We are a third-party assistance provider — not your ISP or cable company. Our service fees are separate from provider charges.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 mb-6 animate-fade-in" style={{ animationDelay: "0.35s" }}>
               <a href="tel:+18882657538">
                 <Button size="lg" variant="hero" className="gap-2 text-base px-8 h-14 rounded-xl shadow-2xl">
-                  <PhoneCall className="h-4.5 w-4.5" /> Call Now (888) 265-7538
-                </Button>
-              </a>
-              <a href="tel:+18882657538">
-                <Button size="lg" className="gap-2 text-base px-8 h-14 rounded-xl border-2 border-primary-foreground/30 bg-primary-foreground/10 text-primary-foreground hover:bg-primary-foreground/20 font-semibold backdrop-blur-sm">
-                  <Phone className="h-4 w-4" /> Call Now (888) 265-7538
+                  <PhoneCall className="h-4.5 w-4.5" /> Call Our Advisors (888) 265-7538
                 </Button>
               </a>
             </div>
 
-            <p className="text-xs text-primary-foreground/50 animate-fade-in" style={{ animationDelay: "0.45s" }}>
-              Not an ISP. No brand affiliation. Service assistance fees apply separately.
+            <p className="text-xs text-primary-foreground/60 animate-fade-in bg-black/30 rounded-lg px-3 py-2 max-w-xl" style={{ animationDelay: "0.45s" }}>
+<strong className="text-primary-foreground/90">Trustournet is NOT your internet or cable provider.</strong> We do not sell plans or subscriptions. Service assistance fees apply and are separate from any ISP or cable provider charges.
             </p>
           </div>
 
@@ -195,7 +190,7 @@ const Index = () => {
                 </div>
                 <div>
                   <p className="font-display text-sm font-bold text-foreground">24/7 Available</p>
-                  <p className="text-xs text-muted-foreground">Independent Support</p>
+                  <p className="text-xs text-muted-foreground">Expert Support</p>
                 </div>
               </div>
             </div>
@@ -204,7 +199,7 @@ const Index = () => {
                 <Users className="h-5 w-5 text-primary" />
                 <div>
                   <p className="font-display text-lg font-extrabold text-foreground">10K+</p>
-                  <p className="text-xs text-muted-foreground">Canadians Assisted</p>
+                  <p className="text-xs text-muted-foreground">Canadians & Americans Assisted</p>
                 </div>
               </div>
             </div>
@@ -212,7 +207,7 @@ const Index = () => {
               <div className="flex items-center gap-3">
                 <CheckCircle className="h-5 w-5 text-primary" />
                 <div>
-                  <p className="font-display text-sm font-bold text-foreground">100% Independent</p>
+                  <p className="font-display text-sm font-bold text-foreground">100% Unbiased</p>
                   <p className="text-xs text-muted-foreground">No provider ties</p>
                 </div>
               </div>
@@ -252,7 +247,7 @@ const Index = () => {
             <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-2">Our Services</p>
             <h2 className="font-display text-3xl md:text-5xl font-extrabold text-foreground mb-4">How We Assist You</h2>
             <p className="text-muted-foreground max-w-xl mx-auto text-lg">
-              Independent guidance to help you navigate internet, broadband, Wi-Fi, and cable TV services across Canada.
+              Expert guidance to help you navigate internet, broadband, Wi-Fi, and cable TV services across Canada and the USA.
             </p>
           </AnimatedSection>
 
@@ -289,7 +284,7 @@ const Index = () => {
           </div>
 
           <p className="text-center text-sm text-muted-foreground mt-8">
-            Our role is limited to independent guidance and assistance only.
+            Our role is limited to general guidance and informational assistance only.
           </p>
         </div>
       </section>
@@ -306,11 +301,11 @@ const Index = () => {
             <AnimatedSection delay="[animation-delay:200ms]">
               <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-2">Why Choose Us</p>
               <h2 className="font-display text-3xl md:text-4xl font-extrabold text-foreground mb-6">
-                Transparent, Independent & Focused on You
+                Transparent, Unbiased & Focused on You
               </h2>
               <div className="space-y-4">
                 {[
-                  { icon: Shield, title: "Fully Independent", desc: "No affiliation with any telecom or internet provider. Our guidance is unbiased." },
+                  { icon: Shield, title: "Fully Unbiased", desc: "No affiliation with any telecom or internet provider. Our guidance is neutral and honest." },
                   { icon: Eye, title: "Complete Transparency", desc: "We clearly disclose our role and fees. No hidden charges or surprises." },
                   { icon: Lock, title: "Privacy First", desc: "We never request provider passwords or sensitive login credentials." },
                   { icon: MessageCircle, title: "Helpful Guidance", desc: "Our team provides clear, understandable information about connectivity services." },
@@ -353,7 +348,7 @@ const Index = () => {
                         <p className="text-muted-foreground leading-relaxed mb-6">{slide.text}</p>
                         <a href="tel:+18882657538">
                           <Button variant="hero" className="gap-2 w-fit">
-                            Call Now (888) 265-7538 <ArrowRight className="h-4 w-4" />
+                            Call Our Advisors (888) 265-7538 <ArrowRight className="h-4 w-4" />
                           </Button>
                         </a>
                       </div>
@@ -385,8 +380,8 @@ const Index = () => {
         <div className="container">
           <AnimatedSection className="text-center mb-14">
             <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-2">Testimonials</p>
-            <h2 className="font-display text-3xl md:text-5xl font-extrabold text-foreground mb-4">What Canadians Say</h2>
-            <p className="text-muted-foreground max-w-lg mx-auto">Real feedback from users who received independent guidance through our platform.</p>
+            <h2 className="font-display text-3xl md:text-5xl font-extrabold text-foreground mb-4">What Our Users Say</h2>
+            <p className="text-muted-foreground max-w-lg mx-auto">Real feedback from users who received guidance through our platform.</p>
           </AnimatedSection>
 
           {/* Desktop grid */}
@@ -472,12 +467,12 @@ const Index = () => {
             <AnimatedSection delay="[animation-delay:200ms]">
               <div className="relative">
                 <div className="rounded-2xl overflow-hidden shadow-lg">
-                  <img src={carouselNetwork} alt="Independent network guidance" className="w-full aspect-square object-cover" />
+                  <img src={carouselNetwork} alt="Network guidance" className="w-full aspect-square object-cover" />
                 </div>
                 <div className="absolute -bottom-4 -left-4 bg-card rounded-xl border p-4 shadow-lg max-w-[200px]">
                   <div className="flex items-center gap-2 mb-1">
                     <Shield className="h-4 w-4 text-primary" />
-                    <span className="font-display text-xs font-bold text-foreground">Independent</span>
+                    <span className="font-display text-xs font-bold text-foreground">Third-Party</span>
                   </div>
                   <p className="text-xs text-muted-foreground">No provider affiliation</p>
                 </div>
@@ -485,7 +480,7 @@ const Index = () => {
             </AnimatedSection>
           </div>
           <p className="text-center text-xs text-muted-foreground mt-12 max-w-2xl mx-auto">
-            Provider mentions are strictly informational. Users sometimes seek guidance related to services offered by providers such as Bell Canada™, Rogers Communications®, or Telus®. Our assistance is independent and informational only.
+            Provider names mentioned (such as Bell Canada™, Rogers Communications®, Telus®, AT&T®, Comcast/Xfinity®, or Verizon®) are referenced for general informational context only. Trustournet is <strong>NOT</strong> affiliated with, authorized by, or endorsed by any of these providers. All trademarks belong to their respective owners.
           </p>
         </div>
       </section>
@@ -500,7 +495,7 @@ const Index = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { step: "01", title: "Reach Out", desc: "Call our independent assistance line or send us an email with your service-related question." },
+              { step: "01", title: "Reach Out", desc: "Call our assistance line or send us an email with your service-related question." },
               { step: "02", title: "Get Guidance", desc: "Our team provides general informational support to help you understand your options." },
               { step: "03", title: "Move Forward", desc: "Use the guidance to make informed decisions about your internet or cable TV services." },
             ].map((item, i) => (
@@ -526,19 +521,17 @@ const Index = () => {
         </div>
         <div className="container relative z-10 max-w-2xl text-center">
           <AnimatedSection>
-            <h2 className="font-display text-3xl md:text-4xl font-extrabold text-primary-foreground mb-4">Need Independent Assistance?</h2>
-            <p className="text-primary-foreground/75 mb-8 text-lg">
-              Speak with our team for general guidance related to internet, broadband, Wi-Fi, or cable TV services.
+            <h2 className="font-display text-3xl md:text-4xl font-extrabold text-primary-foreground mb-4">Need Expert Guidance?</h2>
+            <p className="text-primary-foreground/75 mb-4 text-base">
+              Speak with our advisors for general informational guidance related to internet, broadband, Wi-Fi, or cable TV services.
+            </p>
+            <p className="text-xs text-primary-foreground/60 mb-6">
+              We are not affiliated with any ISP or cable provider. Service assistance fees apply separately from provider charges.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a href="tel:+18882657538">
                 <Button size="lg" variant="hero" className="gap-2 text-base px-8 h-13 rounded-xl">
-                  <Phone className="h-4 w-4" /> Call Now (888) 265-7538
-                </Button>
-              </a>
-              <a href="tel:+18882657538">
-                <Button size="lg" className="gap-2 text-base px-8 h-13 rounded-xl border-2 border-primary-foreground/30 bg-primary-foreground/10 text-primary-foreground hover:bg-primary-foreground/20 font-semibold backdrop-blur-sm">
-                  Call Now (888) 265-7538
+                  <Phone className="h-4 w-4" /> Call Our Advisors (888) 265-7538
                 </Button>
               </a>
             </div>

@@ -6,7 +6,7 @@ const sections = [
   { 
     icon: Shield, 
     title: "Independent Service Provider", 
-    text: "Trustournet is an independent third-party service assistance provider established in 2026. We are NOT an ISP, cable company, or telecommunications provider. We do not own networks, provide connectivity, or deliver internet/cable services. We operate independently with no ownership ties to any service provider. Our business focuses exclusively on providing informational guidance and assistance."
+    text: "Trustournet is an independent third-party service assistance provider established in 2026. We are NOT an ISP, cable company, or telecommunications provider. We do not own networks, provide connectivity, or deliver internet/cable services. We operate independently across Canada and the United States with no ownership ties to any service provider. Our business focuses exclusively on providing informational guidance and assistance to users in Canada and the USA."
   },
   { 
     icon: AlertCircle, 

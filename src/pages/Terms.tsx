@@ -36,7 +36,7 @@ const sections = [
   { 
     icon: Gavel, 
     title: "Governing Law and Disputes", 
-    text: "These Terms are governed by the laws of Canada and the applicable province. Any legal proceedings must be instituted in Canadian courts. You consent to this jurisdiction. Before initiating legal action, parties agree to attempt good faith negotiation. If any provision is found unenforceable, the remaining terms remain in full force."
+    text: "These Terms are governed by the laws of Canada and the United States, including applicable provincial and state laws. Any legal proceedings must be instituted in the applicable courts of Canada or the United States depending on the user's jurisdiction. You consent to this jurisdiction. Before initiating legal action, parties agree to attempt good faith negotiation. If any provision is found unenforceable, the remaining terms remain in full force."
   },
   { 
     icon: RefreshCw, 

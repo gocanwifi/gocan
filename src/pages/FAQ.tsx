@@ -9,7 +9,7 @@ const faqs = [
   { icon: Phone, q: "Do you charge for assistance services?", a: "Yes. Our service fees are separate from any charges billed by telecom providers. Our fees cover the general guidance and informational support we provide." },
   { icon: Shield, q: "Will my service provider still bill me?", a: "Yes. Your provider billing remains unchanged. Our service fee is separate and independent from any provider charges." },
   { icon: Lock, q: "Do you need my provider passwords?", a: "No. We never request provider account passwords or sensitive login credentials." },
-  { icon: HelpCircle, q: "Which providers may be referenced?", a: "We may reference companies such as Bell Canada™, Rogers Communications®, or Telus® for informational guidance only. We are not affiliated with any of these providers." },
+  { icon: HelpCircle, q: "Which providers may be referenced?", a: "We may reference companies such as Bell Canada™, Rogers Communications®, Telus®, AT&T®, Comcast/Xfinity®, or Verizon® for informational guidance only. We are not affiliated with any of these providers." },
   { icon: RotateCcw, q: "Are services refundable?", a: "Refund requests can be submitted within 7 to 15 days of service purchase depending on the type of assistance provided. Full eligibility conditions are explained in the Refund Policy page." },
 ];
 
@@ -55,10 +55,11 @@ const FAQ = () => (
         {/* Contact CTA */}
         <div className="mt-12 rounded-2xl hero-gradient p-8 text-center">
           <h3 className="font-display text-xl font-bold text-primary-foreground mb-2">Still have questions?</h3>
-          <p className="text-primary-foreground/80 text-sm mb-5">Our independent support team is ready to help.</p>
+          <p className="text-primary-foreground/80 text-sm mb-1">Our support team is ready to help.</p>
+          <p className="text-xs text-primary-foreground/60 mb-5">We are not affiliated with any ISP. Service assistance fees apply separately.</p>
           <a href="tel:+18882657538">
             <button className="bg-primary-foreground text-primary font-semibold px-6 py-3 rounded-xl text-sm hover:opacity-90 transition-opacity inline-flex items-center gap-2">
-              <Phone className="h-4 w-4" /> Call Now (888) 265-7538
+              <Phone className="h-4 w-4" /> Call Our Advisors (888) 265-7538
             </button>
           </a>
         </div>
